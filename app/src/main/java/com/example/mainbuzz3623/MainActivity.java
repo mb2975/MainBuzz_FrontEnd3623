@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void saveImage(){
-        File dir = new File(Environment.getDataDirectory(), "SaveImage");
+        File dir = new File(Environment.getExternalStorageDirectory(), "SaveImage");
 
         if(!dir.exists()){
             dir.mkdir();
