@@ -49,20 +49,6 @@
         app:layout_constraintVertical_bias="0.897" />
 
     <EditText
-        android:id="@+id/etAge"
-        android:layout_width="300dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="Age"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.804" />
-
-    <EditText
         android:id="@+id/etPassword"
         android:layout_width="300dp"
         android:layout_height="47dp"
@@ -100,5 +86,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Select Date of Birth"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.804" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

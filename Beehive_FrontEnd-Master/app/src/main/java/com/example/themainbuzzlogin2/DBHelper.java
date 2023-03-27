@@ -23,11 +23,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists users");
+        db.execSQL("drop table if exists ");
         //testing
     }
 
-    public boolean insertData(String username, String password, String name, int age){
+    public boolean insertData(String username, String password, String name, String age){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("username", username);

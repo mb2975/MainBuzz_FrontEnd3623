@@ -4,12 +4,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -33,7 +38,29 @@ public class RegisterActivity extends AppCompatActivity {
 
         DB = new DBHelper(this);
 
-        final EditText etAge = (EditText) findViewById(R.id.etAge);
+
+        final EditText etDate = (EditText) findViewById(R.id.etDate);
+
+        etDate.setOnClickListener(new View.OnClickListener() {
+            DatePickerDialog picker;
+            @Override
+            public void onClick(View v) {
+                final Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+
+
+                picker = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        etDate.setText( (month + 1) + "/" +dayOfMonth  + "/" + year);
+                    }
+                }, year, month, day);
+                picker.show();
+            }
+        });
+
         final EditText etName = (EditText) findViewById(R.id.etName);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
@@ -46,15 +73,15 @@ public class RegisterActivity extends AppCompatActivity {
                 String user = etUsername.getText().toString();
                 String name = etName.getText().toString();
                 String pass = etPassword.getText().toString();
-                String age = etAge.getText().toString();
+                String DoB = etDate.getText().toString();
 
-                if (TextUtils.isEmpty(user) || TextUtils.isEmpty(name) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(age)){
+                if (TextUtils.isEmpty(user) || TextUtils.isEmpty(name) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(DoB)){
                     Toast.makeText(RegisterActivity.this, "All fields Required", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Boolean checkuser = DB.checkUsername(user);
                     if (checkuser == false){
-                        Boolean insert = DB.insertData(user, pass, name, Integer.parseInt(age));
+                        Boolean insert = DB.insertData(user, pass, name, DoB);
                         if (insert==true){
                             Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -63,7 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Toast.makeText(RegisterActivity.this, "User Already Exists", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "User Already Exists With That Username, Try Again", Toast.LENGTH_SHORT).show();
 
                     }
                 }
