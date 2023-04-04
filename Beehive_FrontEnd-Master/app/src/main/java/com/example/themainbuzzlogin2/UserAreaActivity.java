@@ -35,6 +35,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -53,20 +55,39 @@ public class UserAreaActivity extends AppCompatActivity {
     ImageView imageView;
     OutputStream outputStream;
 
+    ImageView FrBtLink;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //Get rid of Action bar and title, to my knowledge, this is the only way to do so and you must do it in every activity - JG
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
         btnpicture = findViewById(R.id.btncamera_id);
         saveImg = findViewById(R.id.saveimgbtn);
         imageView  = findViewById(R.id.imageview1);
 
+        FrBtLink = findViewById(R.id.FrBtLink);
+
         btnpicture.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, REQUEST_CODE);
+            }
+        });
+
+        FrBtLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FriendsActivity.class);
+                startActivity(intent);
             }
         });
 

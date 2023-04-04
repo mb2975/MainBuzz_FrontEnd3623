@@ -5,13 +5,26 @@
     android:id="@+id/PasswordField"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1EDCA"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="762dp"
+        android:backgroundTint="#F0ECC9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516"
+        app:srcCompat="@drawable/main_screen" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Temp"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -21,76 +34,75 @@
 
     <EditText
         android:id="@+id/etPassword"
+        android:gravity="center"
         android:layout_width="311dp"
         android:layout_height="48dp"
         android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:backgroundTint="#F1EDCB"
+        android:backgroundTintMode="add"
         android:ems="10"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707"
+        app:layout_constraintVertical_bias="0.762"
         tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/etUsername1"
+        android:gravity="center"
+        android:background="@android:color/transparent"
         android:layout_width="311dp"
         android:layout_height="48dp"
         android:autofillHints=""
+        android:backgroundTint="#F1EDCA"
+        android:backgroundTintMode="add"
         android:ems="10"
-        android:hint="Enter Username"
+        android:hapticFeedbackEnabled="true"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
+        app:layout_constraintVertical_bias="0.664"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/bLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#F1EDCA"
         android:text="Log-in"
+        android:textColor="#050505"
+        android:textColorHint="#313435"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818"
+        app:layout_constraintVertical_bias="0.859"
         app:rippleColor="#E1C71F"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-22"
-        android:text="The Main Buzz"
-        android:textAlignment="textEnd"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tRegister1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="#F1EDCA"
+        android:backgroundTintMode="add"
         android:text="Register Here"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.933" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
