@@ -68,8 +68,8 @@
 
     <ImageView
         android:id="@+id/FrBtLink"
-        android:layout_width="135dp"
-        android:layout_height="164dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:onClick=""
         app:layout_constraintBottom_toBottomOf="@+id/imageview1"
         app:layout_constraintEnd_toEndOf="@+id/imageview1"
@@ -77,6 +77,18 @@
         app:layout_constraintStart_toStartOf="@+id/imageview1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/friends__my_hive_" />
+        app:srcCompat="@drawable/bee_friends" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Photo Feed"
+        app:layout_constraintBottom_toBottomOf="@+id/imageview1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

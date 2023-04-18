@@ -20,12 +20,7 @@ package com.example.themainbuzzlogin2;
 //}
 
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -40,7 +35,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.Manifest;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -56,6 +56,12 @@ public class UserAreaActivity extends AppCompatActivity {
     OutputStream outputStream;
 
     ImageView FrBtLink;
+
+    Button BTN;
+
+    //Uploading Image as Post - JG
+
+    File compressedImageFile = null;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -74,6 +80,16 @@ public class UserAreaActivity extends AppCompatActivity {
         imageView  = findViewById(R.id.imageview1);
 
         FrBtLink = findViewById(R.id.FrBtLink);
+
+        BTN = findViewById(R.id.button);
+
+        BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PhotoFeedActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnpicture.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -123,6 +139,8 @@ public class UserAreaActivity extends AppCompatActivity {
 
     private void saveImage(){
         File dir = new File(Environment.getExternalStorageDirectory(), "SaveImage");
+
+
 
         if(!dir.exists()){
             dir.mkdir();

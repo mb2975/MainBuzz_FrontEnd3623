@@ -1,12 +1,9 @@
 package com.example.themainbuzzlogin2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.method.CharacterPickerDialog;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,10 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     DBHelper DB;
     //test
+
+    static String currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     Boolean checkuserpass = DB.checkUsernamePassword(user,pass);
                     if(checkuserpass == true){
+
+                        currentUser = user;
                         Intent intent = new Intent(getApplicationContext(), UserAreaActivity.class);
                         startActivity(intent);
                     }

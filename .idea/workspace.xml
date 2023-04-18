@@ -9,7 +9,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c67b0c00-396f-4ae2-9363-a2dca490610c" name="Changes" comment="" />
+    <list default="true" id="c67b0c00-396f-4ae2-9363-a2dca490610c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/java/com/example/themainbuzzlogin2/ScrollingActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/layout-w1240dp/content_scrolling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/layout-w936dp/content_scrolling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/layout/activity_scrolling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/layout/content_scrolling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/menu/menu_scrolling.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values-land/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values-w1240dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values-w600dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/java/com/example/themainbuzzlogin2/UserAreaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/java/com/example/themainbuzzlogin2/UserAreaActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Beehive_FrontEnd-Master/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,15 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/Owner/Desktop/BEEHIVE"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/Desktop/BEEHIVE&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="MainBuzz3623.app.main" />
